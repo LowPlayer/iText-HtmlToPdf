@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        @page {
+            size: A4 landscape;
+        }
+
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+            ul li {
+                list-style: none;
+            }
+
+                ul li:after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+
+                ul li p {
+                    float: left;
+                    margin-left: 2em;
+                }
+
+                    ul li p:first-child {
+                        margin-left: 0;
+                    }
+
+                    ul li p img {
+                        width: 36px;
+                        height: 36px;
+                    }
+    </style>
+</head>
+<body>
+    <h3>使用第三方库iText7.pdfHtml，将Html转换成Pdf，以及如何以Html作为打印模板</h3>
+    <h5>{{ListOfNames}}</h5>
+    <ul>
+        <!--template-start-->
+        <li>
+            <p><img src="{{Avatar}}" /></p>
+            <p>姓名：{{Name}}</p>
+            <p>年龄：{{Age}}</p>
+            <p>性别：{{Sex}}</p>
+        </li>
+        <!--template-end-->
+    </ul>
+</body>
+</html>
